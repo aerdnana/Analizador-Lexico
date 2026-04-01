@@ -21,13 +21,12 @@ puntuacion_key = puntuacion.keys()
 
 
 TOKEN_PATTERN = re.compile(
+    r'\".*?\"|\'.*?\''        # cadenas de texto
     r'|==|!=|<=|>='          # operadores dobles
     r'|[=+\-*/%<>]'          # operadores simples
     r'|[0-9]+(?:\.[0-9]+)?' # números (int y float)
-    r'|[a-zA-Z_]\w*'         # identificadores 
+    r'|[a-zA-Z_]\w*'         # identificadores
     r'|[():;,.\[\]{}]'       # puntuacion
-    r'\".*?\"|\'.*?\''        # cadenas de texto
-    r'|[a-zA-Z_]\w*'          # identificadores
 )
 
 a = file.read()
